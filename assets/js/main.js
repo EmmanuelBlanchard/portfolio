@@ -1,0 +1,22 @@
+/*===== MENU SHOW =====*/ 
+
+
+/*===== ACTIVE AND REMOVE MENU =====*/
+
+
+/*===== SCROLL REVEAL ANIMATION =====*/
+
+
+/*SCROLL HOME*/
+
+
+/*SCROLL ABOUT*/
+
+
+/*SCROLL SKILLS*/
+
+
+/*SCROLL WORK*/
+ 
+
+/*SCROLL CONTACT*/
