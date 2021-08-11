@@ -11,10 +11,8 @@
 :root {
     /* Change favorite color */
     --hue-color: 224; /* Purple 250 - Green 142 - Blue 230 - Pink 340 */
-    /* HSL color mode */ /*
-    --first-color: #4070F4; */
-    --first-color: hsl(var(--hue-color), 89%, 60%); /*
-    --second-color: #0E2431; */
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 89%, 60%);
     --first-color-second: hsl(var(--hue-color), 56%, 12%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
@@ -24,6 +22,7 @@
     --input-color: hsl(var(--hue-color), 70%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
     --container-color: #FFF;
+    --hover-color: #DBDBDB;
 }
 
 /*===== Font and typography =====*/
@@ -155,13 +154,31 @@ img {
 
 /*===== NAV =====*/
 .nav {
-    /* test */
     max-width: 968px;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: var(--font-semi);
+}
+
+.nav__logo,
+.nav__toggle {
+  color: var(--title-color);
+  font-weight: var(--font-semi);
+}
+
+.nav__logo:hover {
+	color: var(--first-color);
+}
+
+.nav__toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav__toggle:hover {
+	color: var(--first-color);
 }
 
 @media screen and (max-width: 767px) {
@@ -172,7 +189,7 @@ img {
         width: 80%;
         height: 100%;
         padding: 2rem;
-        background-color: var(--second-color);
+        background-color: var(--first-color-second);
         transition: .3s;
     }
 }
@@ -185,9 +202,7 @@ img {
 }
 .nav__link:hover {
     position: relative;
-    /* Try */
-    color: var(--first-color);
-    /* Try */
+    color: var(--hover-color);
 }
 .nav__link:hover:after {
     position: absolute;
@@ -198,32 +213,6 @@ img {
     top: 2rem;
     background-color: var(--first-color);
 }
-.nav__logo {
-    color: var(--second-color);
-}
-/* Try */
-.nav__logo {
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-}
-
-.nav__logo:hover {
-	color: var(--first-color);
-}
-/* Try above */
-.nav__toggle {
-    color: var(--second-color);
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* Test */
-.nav__logo,
-.nav__toggle {
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-}
-/* Test above */
 
 /*Active menu*/
 .active::after {
@@ -242,11 +231,6 @@ img {
 }
 
 /*===== HOME =====*/
-.home {
-    height: calc(100vh - 3rem);
-    row-gap: 1rem;
-}
-
 .home__container {
     gap: 1rem;
 }
@@ -329,14 +313,14 @@ img {
     display: inline-block;
     background-color: var(--first-color);
     color: #fff;
-    padding: .75rem 2.5rem;
-    font-weight: var(--font-semi);
+    padding: 1rem;
+    font-weight: var(--font-medium);
     border-radius: .5rem;
 }
 .button:hover {
     box-shadow: 0 10px 36px rgba(0,0,0,.15);
 }
-/* Try */
+
 .button:hover {
     background-color: var(--first-color-alt);
 }
@@ -349,7 +333,6 @@ img {
     display: inline-flex;
     align-items: center;
 }
-/* try above */
 
 /* ===== ABOUT =====*/
 .about__container {
@@ -495,6 +478,9 @@ img {
         margin-right: var(--mb-2);
     }
 
+    .home__content {
+        grid-template-columns: .25fr 3fr;
+    }
     .home__blob {
         width: 180px;
     }
@@ -527,7 +513,6 @@ img {
     .section {
         padding: 6rem 0 2rem;
     }
-    /* test above */
     
     .section-title {
         margin-bottom: var(--mb-6);
@@ -560,11 +545,7 @@ img {
     .nav__link {
         color: var(--first-color-second);
     }
-
-    .home {
-        height: 100vh;
-    }
-
+    
     .home__container {
         row-gap: 5rem;
     }
@@ -575,21 +556,13 @@ img {
     .home__blob {
         width: 270px;
     }
-    /* Test above */
-    /*
-    .home__data {
-        align-self: flex-end;
+    .home__scroll {
+        display: block;
     }
-    .home__social {
-        padding-top: 0;
-        padding-bottom: 2.5rem;
-        flex-direction: row;
-        align-self: flex-end;
+    .home__scroll-button {
+        margin-left: 3rem;
     }
-    .home__social-icon {
-        margin-bottom: 0;
-        margin-right: var(--mb-4);
-    } */
+    
     .about__container, .skills__container {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
