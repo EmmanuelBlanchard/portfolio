@@ -1,335 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- =====BOX ICONS===== -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- =====BOX ICONS===== -->
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <!--===== SWIPER CSS =====-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-    <!--===== SWIPER CSS =====-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!--===== CSS =====-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        
+        <title>Portfolio de Emmanuel Blanchard</title>
+    </head>
 
-    <!--===== CSS =====-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    
-    <title>Portfolio de Emmanuel Blanchard</title>
-</head>
-
-<body>
-    <!--===== HEADER =====-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#home" class="nav__logo">Emmanuel</a>
-            
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Accueil</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">À propos</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Compétences</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Réalisations</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-        </nav>
-    </header>
-
-    <main class="main">
-        <!--===== HOME =====-->
-        <section class="home section" id="home">
-            <div class="home__container container grid">
-                <div class="home__content grid">
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/in/emmanuel-blanchard-001/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin' ></i></a>
-                        <a href="https://github.com/EmmanuelBlanchard/" target="_blank" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                    </div>
-
-                    <div class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                            </mask>
-                            <g mask="url(#mask0)">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-
-                                <image class="home__blob-img" x='20' y='15' href="assets/img/profil.png"/>
-                            </g>
-                        </svg>
-                    </div>
-
-                    <div class="home__data">
-                        <h1 class="home__title">Bonjour, <br> Je suis Emmanuel</h1>
-                        <h3 class="home__subtitle">Développeur Web</h3>
-                        
-                        <a href="#contact" class="button button--flex">
-                            Me contacter <i class='bx bx-message-rounded-detail button__icon'></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="home__scroll">
-                    <a href="#about" class="home__scroll-button button--flex">
-                        <i class='bx bx-mouse home__scroll-mouse' ></i>
-                        <span class="home__scroll-name">Défiler vers le bas</span>
-                        <i class='bx bx-down-arrow-alt home__scroll-arrow' ></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!--===== ABOUT =====-->
-        <section class="about section" id="about">
-            <h2 class="section-title">À propos</h2>
-
-            <div class="about__container container grid">
-                <img src="assets/img/about.jpg" alt="" class="about__img">
-
-                <div class="about__data">
-                    <p class="about__description">
-                        Passionné par la technologie et l'informatique, après avoir lu des cours de programmation sur les sites Codecademy et OpenClassrooms, j'ai décidé de me reconvertir dans le développement web.
-
-                        Je suis autodidacte, curieux, persévérant et j'ai soif d'apprendre.
-                    </p>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#home" class="nav__logo">Emmanuel</a>
                 
-                    <div class="about__buttons">
-                        <a download="" href="assets/pdf/CV-Emmanuel-Blanchard.pdf" class="button button--flex">
-                            Télécharger mon CV <i class='bx bx-download button__icon' ></i>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Accueil</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">À propos</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Compétences</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Réalisations</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--===== HOME =====-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/in/emmanuel-blanchard-001/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                            <a href="https://github.com/EmmanuelBlanchard/" target="_blank" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                        </div>
+
+                        <div class="home__img">
+                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+
+                                    <image class="home__blob-img" x='20' y='15' href="assets/img/profil.png"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="home__data">
+                            <h1 class="home__title">Bonjour, <br> Je suis Emmanuel</h1>
+                            <h3 class="home__subtitle">Développeur Web</h3>
+                            
+                            <a href="#contact" class="button button--flex">
+                                Me contacter <i class='bx bx-message-rounded-detail button__icon'></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-button button--flex">
+                            <i class='bx bx-mouse home__scroll-mouse' ></i>
+                            <span class="home__scroll-name">Défiler vers le bas</span>
+                            <i class='bx bx-down-arrow-alt home__scroll-arrow' ></i>
                         </a>
                     </div>
                 </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">À propos</h2>
+
+                <div class="about__container container grid">
+                    <img src="assets/img/about.jpg" alt="" class="about__img">
+
+                    <div class="about__data">
+                        <p class="about__description">
+                            Passionné par la technologie et l'informatique, après avoir lu des cours de programmation sur les sites Codecademy et OpenClassrooms, j'ai décidé de me reconvertir dans le développement web.
+
+                            Je suis autodidacte, curieux, persévérant et j'ai soif d'apprendre.
+                        </p>
+                    
+                        <div class="about__buttons">
+                            <a download="" href="assets/pdf/CV-Emmanuel-Blanchard.pdf" class="button button--flex">
+                                Télécharger mon CV <i class='bx bx-download button__icon' ></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Compétences</h2>
+
+                <div class="skills__container grid">
+
+                    <div>
+                        <h2 class="skills__subtitle">Compétences professionnelles</h2>
+                        <p class="skills__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro error reiciendis quidem laudantium culpa sed quibusdam, dolores vitae consequuntur id cupiditate iusto esse dicta eveniet sint, necessitatibus cum voluptas quos!</p>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon' ></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
+
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                            
+                            <div class="skills__bar skills__html"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-css3 skills__icon' ></i>
+                                <span class="skills__name">CSS3</span>
+                            </div>
+
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                            
+                            <div class="skills__bar skills__css"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-bootstrap skills__icon' ></i>
+                                <span class="skills__name">BOOTSTRAP</span>
+                            </div>
+
+                            <div>
+                                <span class="skills__percentage">70%</span>
+                            </div>
+                            
+                            <div class="skills__bar skills__bootstrap"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <span class="skills__name">JAVASCRIPT</span>
+                            </div>
+
+                            <div>
+                                <span class="skills__percentage">50%</span>
+                            </div>
+                            
+                            <div class="skills__bar skills__js"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-php skills__icon' ></i>
+                                <span class="skills__name">PHP</span>
+                            </div>
+
+                            <div>
+                                <span class="skills__percentage">60%</span>
+                            </div>
+                            
+                            <div class="skills__bar skills__php"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img src="assets/img/work6.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Réalisations</h2>
+
+                <div class="work__container container swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                        <!--===== WORK 1 =====-->
+                        <div class="work__content grid swiper-slide">
+                            <img src="assets/img/work1.jpg" alt="" class="work__img">
+
+                            <div class="work__data">
+                                <h3 class="work__title">WebAgency</h3>
+                                <p class="work__description">
+                                    Site web vitrine d'une agence web fictive
+                                </p>
+                                <a href="https://projet1.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
+                                    Demo
+                                    <i class='bx bx-right-arrow-alt button__icon' ></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--===== WORK 2 =====-->
+                        <div class="work__content grid swiper-slide">
+                            <img src="assets/img/work2.jpg" alt="" class="work__img">
+
+                            <div class="work__data">
+                                <h3 class="work__title">Ireki</h3>
+                                <p class="work__description">
+                                    Site fictif de l'office de tourisme d'Ireki
+                                </p>
+                                <a href="https://projet2.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
+                                    Demo
+                                    <i class='bx bx-right-arrow-alt button__icon' ></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--===== WORK 3 =====-->
+                        <div class="work__content grid swiper-slide">
+                            <img src="assets/img/work3.jpg" alt="" class="work__img">
+
+                            <div class="work__data">
+                                <h3 class="work__title">Velo Lyon</h3>
+                                <p class="work__description">
+                                    Site de réservation de vélos, utilise les APIsJCDecaux et Leaflet
+                                </p>
+                                <a href="https://projet3.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
+                                    Demo
+                                    <i class='bx bx-right-arrow-alt button__icon' ></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--===== WORK 4 =====-->
+                        <div class="work__content grid swiper-slide">
+                            <img src="assets/img/work4.jpg" alt="" class="work__img">
+
+                            <div class="work__data">
+                                <h3 class="work__title">JeanForteroche</h3>
+                                <p class="work__description">
+                                    Blog pour un écrivain, utilisant le modèleMVC et la logique CRUD
+                                </p>
+                                <a href="https://projet4.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
+                                    Demo
+                                    <i class='bx bx-right-arrow-alt button__icon' ></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--===== WORK 5 =====-->
+                        <div class="work__content grid swiper-slide">
+                            <img src="assets/img/work5.jpg" alt="" class="work__img">
+
+                            <div class="work__data">
+                                <h3 class="work__title">ÉchangeLivres</h3>
+                                <p class="work__description">
+                                    Site web d'échange de livres, en développement utilisant le framework Symfony
+                                </p>
+                                <a href="https://github.com/EmmanuelBlanchard/OpenClassroomsProject5" class="button button--flex button--small work__button">
+                                    Demo
+                                    <i class='bx bx-right-arrow-alt button__icon' ></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next">
+                        <i class='bx bx-chevron-right swiper-work-icon' ></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class='bx bx-chevron-left swiper-work-icon' ></i>
+                    </div>
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Me contacter</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Nom" class="contact__input">
+                        <input type="email" placeholder="E-mail" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+
+                        <input type="button" value="Envoyer" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Emmanuel</p>
+
+            <div class="footer__social">
+                <a href="#" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-github' ></i></a>
             </div>
-        </section>
+            <p> Emmanuel Blanchard | Mentions légales</p>
+        </footer>
 
-        <!--===== SKILLS =====-->
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Compétences</h2>
+        <!--===== SWIPER JS =====--><!--
+        <script src="assets/js/swiper-bundle.min.js"></script>-->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-            <div class="skills__container grid">
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
 
-                <div>
-                    <h2 class="skills__subtitle">Compétences professionnelles</h2>
-                    <p class="skills__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro error reiciendis quidem laudantium culpa sed quibusdam, dolores vitae consequuntur id cupiditate iusto esse dicta eveniet sint, necessitatibus cum voluptas quos!</p>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon' ></i>
-                            <span class="skills__name">HTML5</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">80%</span>
-                        </div>
-                        
-                        <div class="skills__bar skills__html"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-css3 skills__icon' ></i>
-                            <span class="skills__name">CSS3</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">80%</span>
-                        </div>
-                        
-                        <div class="skills__bar skills__css"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-bootstrap skills__icon' ></i>
-                            <span class="skills__name">BOOTSTRAP</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">70%</span>
-                        </div>
-                        
-                        <div class="skills__bar skills__bootstrap"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-javascript skills__icon' ></i>
-                            <span class="skills__name">JAVASCRIPT</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">50%</span>
-                        </div>
-                        
-                        <div class="skills__bar skills__js"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-php skills__icon' ></i>
-                            <span class="skills__name">PHP</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">60%</span>
-                        </div>
-                        
-                        <div class="skills__bar skills__php"></div>
-                    </div>
-                </div>
-
-                <div>
-                    <img src="assets/img/work6.jpg" alt="" class="skills__img">
-                </div>
-            </div>
-        </section>
-
-        <!--===== WORK =====-->
-        <section class="work section" id="work">
-            <h2 class="section-title">Réalisations</h2>
-
-            <div class="work__container container swiper-container mySwiper">
-                <div class="swiper-wrapper">
-                    <!--===== WORK 1 =====-->
-                    <div class="work__content grid swiper-slide">
-                        <img src="assets/img/work1.jpg" alt="" class="work__img">
-
-                        <div class="work__data">
-                            <h3 class="work__title">WebAgency</h3>
-                            <p class="work__description">
-                                Site web vitrine d'une agence web fictive
-                            </p>
-                            <a href="https://projet1.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
-                                Demo
-                                <i class='bx bx-right-arrow-alt button__icon' ></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--===== WORK 2 =====-->
-                    <div class="work__content grid swiper-slide">
-                        <img src="assets/img/work2.jpg" alt="" class="work__img">
-
-                        <div class="work__data">
-                            <h3 class="work__title">Ireki</h3>
-                            <p class="work__description">
-                                Site fictif de l'office de tourisme d'Ireki
-                            </p>
-                            <a href="https://projet2.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
-                                Demo
-                                <i class='bx bx-right-arrow-alt button__icon' ></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--===== WORK 3 =====-->
-                    <div class="work__content grid swiper-slide">
-                        <img src="assets/img/work3.jpg" alt="" class="work__img">
-
-                        <div class="work__data">
-                            <h3 class="work__title">Velo Lyon</h3>
-                            <p class="work__description">
-                                Site de réservation de vélos, utilise les APIsJCDecaux et Leaflet
-                            </p>
-                            <a href="https://projet3.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
-                                Demo
-                                <i class='bx bx-right-arrow-alt button__icon' ></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--===== WORK 4 =====-->
-                    <div class="work__content grid swiper-slide">
-                        <img src="assets/img/work4.jpg" alt="" class="work__img">
-
-                        <div class="work__data">
-                            <h3 class="work__title">JeanForteroche</h3>
-                            <p class="work__description">
-                                Blog pour un écrivain, utilisant le modèleMVC et la logique CRUD
-                            </p>
-                            <a href="https://projet4.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
-                                Demo
-                                <i class='bx bx-right-arrow-alt button__icon' ></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--===== WORK 5 =====-->
-                    <div class="work__content grid swiper-slide">
-                        <img src="assets/img/work5.jpg" alt="" class="work__img">
-
-                        <div class="work__data">
-                            <h3 class="work__title">ÉchangeLivres</h3>
-                            <p class="work__description">
-                                Site web d'échange de livres, en développement utilisant le framework Symfony
-                            </p>
-                            <a href="https://github.com/EmmanuelBlanchard/OpenClassroomsProject5" class="button button--flex button--small work__button">
-                                Demo
-                                <i class='bx bx-right-arrow-alt button__icon' ></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add Arrows -->
-                <div class="swiper-button-next">
-                    <i class='bx bx-chevron-right swiper-work-icon' ></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class='bx bx-chevron-left swiper-work-icon' ></i>
-                </div>
-
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-
-        <!--===== CONTACT =====-->
-        <section class="contact section" id="contact">
-            <h2 class="section-title">Me contacter</h2>
-
-            <div class="contact__container bd-grid">
-                <form action="" class="contact__form">
-                    <input type="text" placeholder="Nom" class="contact__input">
-                    <input type="email" placeholder="E-mail" class="contact__input">
-                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-
-                    <input type="button" value="Envoyer" class="contact__button button">
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!--===== FOOTER =====-->
-    <footer class="footer">
-        <p class="footer__title">Emmanuel</p>
-
-        <div class="footer__social">
-            <a href="#" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
-            <a href="#" class="footer__icon"><i class='bx bxl-github' ></i></a>
-        </div>
-        <p> Emmanuel Blanchard | Mentions légales</p>
-    </footer>
-
-    <!--===== SWIPER JS =====--><!--
-    <script src="assets/js/swiper-bundle.min.js"></script>-->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--===== MAIN JS =====-->
-    <script src="assets/js/main.js"></script>
-</body>
-
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
