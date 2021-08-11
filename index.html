@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/styles.css">
-
     <!-- =====BOX ICONS===== -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
+    <!--===== SWIPER CSS =====-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--===== CSS =====-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
     <title>Portfolio de Emmanuel Blanchard</title>
 </head>
 
@@ -112,7 +116,7 @@
         <section class="skills section" id="skills">
             <h2 class="section-title">Compétences</h2>
 
-            <div class="skills__container bd-grid">
+            <div class="skills__container grid">
 
                 <div>
                     <h2 class="skills__subtitle">Compétences professionnelles</h2>
@@ -185,7 +189,7 @@
                 </div>
 
                 <div>
-                    <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    <img src="assets/img/work6.jpg" alt="" class="skills__img">
                 </div>
             </div>
         </section>
@@ -194,25 +198,99 @@
         <section class="work section" id="work">
             <h2 class="section-title">Réalisations</h2>
 
-            <div class="work__container bd-grid">
-                <div class="work__img">
-                    <img src="assets/img/work1.jpg" alt="">
+            <div class="work__container container swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <!--===== WORK 1 =====-->
+                    <div class="work__content grid swiper-slide">
+                        <img src="assets/img/work1.jpg" alt="" class="work__img">
+
+                        <div class="work__data">
+                            <h3 class="work__title">WebAgency</h3>
+                            <p class="work__description">
+                                Site web vitrine d'une agence web fictive
+                            </p>
+                            <a href="https://projet1.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
+                                Demo
+                                <i class='bx bx-right-arrow-alt button__icon' ></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--===== WORK 2 =====-->
+                    <div class="work__content grid swiper-slide">
+                        <img src="assets/img/work2.jpg" alt="" class="work__img">
+
+                        <div class="work__data">
+                            <h3 class="work__title">Ireki</h3>
+                            <p class="work__description">
+                                Site fictif de l'office de tourisme d'Ireki
+                            </p>
+                            <a href="https://projet2.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
+                                Demo
+                                <i class='bx bx-right-arrow-alt button__icon' ></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--===== WORK 3 =====-->
+                    <div class="work__content grid swiper-slide">
+                        <img src="assets/img/work3.jpg" alt="" class="work__img">
+
+                        <div class="work__data">
+                            <h3 class="work__title">Velo Lyon</h3>
+                            <p class="work__description">
+                                Site de réservation de vélos, utilise les APIsJCDecaux et Leaflet
+                            </p>
+                            <a href="https://projet3.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
+                                Demo
+                                <i class='bx bx-right-arrow-alt button__icon' ></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--===== WORK 4 =====-->
+                    <div class="work__content grid swiper-slide">
+                        <img src="assets/img/work4.jpg" alt="" class="work__img">
+
+                        <div class="work__data">
+                            <h3 class="work__title">JeanForteroche</h3>
+                            <p class="work__description">
+                                Blog pour un écrivain, utilisant le modèleMVC et la logique CRUD
+                            </p>
+                            <a href="https://projet4.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
+                                Demo
+                                <i class='bx bx-right-arrow-alt button__icon' ></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--===== WORK 5 =====-->
+                    <div class="work__content grid swiper-slide">
+                        <img src="assets/img/work5.jpg" alt="" class="work__img">
+
+                        <div class="work__data">
+                            <h3 class="work__title">ÉchangeLivres</h3>
+                            <p class="work__description">
+                                Site web d'échange de livres, en développement utilisant le framework Symfony
+                            </p>
+                            <a href="https://github.com/EmmanuelBlanchard/OpenClassroomsProject5" class="button button--flex button--small work__button">
+                                Demo
+                                <i class='bx bx-right-arrow-alt button__icon' ></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="work__img">
-                    <img src="assets/img/work2.jpg" alt="">
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class='bx bx-chevron-right swiper-work-icon' ></i>
                 </div>
-                <div class="work__img">
-                    <img src="assets/img/work3.jpg" alt="">
+                <div class="swiper-button-prev">
+                    <i class='bx bx-chevron-left swiper-work-icon' ></i>
                 </div>
-                <div class="work__img">
-                    <img src="assets/img/work4.jpg" alt="">
-                </div>
-                <div class="work__img">
-                    <img src="assets/img/work5.jpg" alt="">
-                </div>
-                <div class="work__img">
-                    <img src="assets/img/work6.jpg" alt="">
-                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -242,6 +320,10 @@
         </div>
         <p> Emmanuel Blanchard | Mentions légales</p>
     </footer>
+
+    <!--===== SWIPER JS =====--><!--
+    <script src="assets/js/swiper-bundle.min.js"></script>-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
