@@ -504,6 +504,34 @@ img {
     color: var(--text-color-light);
 }
 
+.contact__at::before {
+    content: "\000040";
+    font-size: inherit !important;
+}
+.contact__at span {
+	font-size: 1px;
+    font-size: 0.1px;
+    text-indent: -999px;
+    width: 1px;
+    overflow: hidden;
+}
+
+span[class^="contact__zero-"]{
+	font-size:1px;
+	font-size:0.01rem;
+}
+span[class^="contact__zero-"]::before{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}	
+
+.contact__zero-one::before{
+	content:"01";
+}
+.contact__zero-one::before{
+	content:"06";
+}
+
 .contact__content {
     background-color: var(--input-color);
     border-radius: .5rem;
