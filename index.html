@@ -327,27 +327,52 @@
                         </div>
                     </div>
 
-                    <form action="" class="contact__form grid">
+                    <form action="" id="contact__form" class="contact__form grid" name="contact__form">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="" class="contact__label">Nom</label>
-                                <input type="text" class="contact__input">
+                                <i class='bx bx-check-circle' ></i>
+                                <i class='bx bx-error-circle' ></i>
+                                <label for="contact__form-lastname" class="contact__label">Nom</label>
+                                <input type="text" id="contact__form-lastname" name="lastname" class="contact__input" required>
+                                <small></small>
                             </div>
                             <div class="contact__content">
-                                <label for="" class="contact__label">E-mail</label>
-                                <input type="email" class="contact__input">
+                                <i class='bx bx-check-circle' ></i>
+                                <i class='bx bx-error-circle' ></i>
+                                <label for="contact__form-firstname" class="contact__label">Prénom</label>
+                                <input type="text" id="contact__form-firstname" name="firstname" class="contact__input" required>
+                                <small></small>
                             </div>
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Message</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <i class='bx bx-check-circle' ></i>
+                            <i class='bx bx-error-circle' ></i>
+                            <label for="contact__form-email" class="contact__label">E-mail</label>
+                            <input type="email" id="contact__form-email" name="email" class="contact__input" required>
+                            <small></small>
+                        </div>
+                        
+                        <div class="contact__content">
+                            <i class='bx bx-check-circle' ></i>
+                            <i class='bx bx-error-circle' ></i>
+                            <label for="contact__form-message" class="contact__label">Message</label>
+                            <textarea name="message" id="contact__form-message" cols="0" rows="7" class="contact__input" required></textarea>
+                            <small></small>
+                        </div>
+                        
+                        <div class="contact__content">
+                            <i class='bx bx-check-circle' ></i>
+                            <i class='bx bx-error-circle' ></i>
+                            <label for="agreeterms" class="contact__label">En soumettant ce formulaire, j'accepte que les informations saisies soient exploitées dans le cadre de la demande de contact.</label>
+                            <input type="checkbox" id="contact__form-agreeterms" name="agreeterms" class="contact__input" value="1" required>
+                            <small></small>
                         </div>
                         
                         <div>
-                            <a href="" class="button button--flex">
+                            <button type="submit" id="contact__form-submit" class="button button--flex">
                                 Envoyer
                                 <i class='bx bx-message-rounded-detail button__icon'></i>
-                            </a>
+                            </button>
                         </div>
                     </form>
                 </div>

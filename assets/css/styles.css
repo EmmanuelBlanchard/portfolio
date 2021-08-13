@@ -536,6 +536,7 @@ span[class^="contact__zero-"]::before{
     background-color: var(--input-color);
     border-radius: .5rem;
     padding: .75rem 1rem .25rem;
+    position: relative;
 }
 
 .contact__label {
@@ -550,8 +551,61 @@ span[class^="contact__zero-"]::before{
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     border: none;
+    border: .15rem solid transparent;
+    border-radius: .5rem;
     outline: none;
-    padding: .25rem .5rem .5rem 0;
+    padding: .5rem;
+}
+
+.contact__form.grid, .contact__inputs.grid {
+	gap: 2.5rem;
+}
+
+.contact__content input:focus, .contact__content textarea:focus {
+    border-color: #644C4B;
+}
+
+.contact__content.success input {
+	border-color: #2B7D54;
+}
+
+.contact__content.error input{
+	border-color: #D8221B;
+}
+
+.contact__content i {
+	visibility: hidden;
+	position: absolute;
+	top: 5px;
+	right: 25px;
+	font-size: 1.5rem;
+}
+
+.contact__content.success i.bx-check-circle {
+	color: #2B7D54;
+	visibility: visible;
+}
+
+.contact__content.error i.bx-error-circle {
+	color: #D8221B;
+	visibility: visible;
+}
+
+.contact__content small {
+	color: #D8221B ;
+	position: absolute;
+    bottom: -2rem;
+	left: 1rem;
+    font-size: 0.85rem;
+	visibility: hidden;
+}
+
+.contact__content.error small {
+	visibility: visible;
+}
+
+.contact__content.success small {
+	visibility: hidden;
 }
 
 /* ===== FOOTER =====*/
