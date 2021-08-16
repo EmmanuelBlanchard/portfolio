@@ -271,7 +271,7 @@
 
                 <div>
                     <h3 class="contact__title">E-mail</h3>
-                    <span class="contact__subtitle">emmanuel.blanchard<span class="contact__at"><span>(arobase)</span></span>tutanota.com</span>
+                    <span class="contact__subtitle">emmanuel.blanchard.pro<span class="contact__at"><span>(arobase)</span></span>gmail.com</span>
                 </div>
             </div>
 

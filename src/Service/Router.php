@@ -38,7 +38,6 @@ class Router
 
         // Injection des dépendances
         $this->homeController = new HomeController($this->view, $this->session, $this->error);
-
     }
 
     public function run(): void
