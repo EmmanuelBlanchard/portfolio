@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace  App\Service;
 
 use App\Controller\Error;
+use App\Controller\FrontOffice\ContactController;
 use App\Controller\FrontOffice\HomeController;
 use App\Service\Database;
 use App\Service\Http\Request;
@@ -19,6 +20,7 @@ class Router
     private Database $database;
     private View $view;
     private HomeController $homeController;
+    private ContactController $contactController;
     private Request $request;
     private Session $session;
     private AccessControl $accesscontrol;
@@ -38,6 +40,7 @@ class Router
 
         // Injection des dépendances
         $this->homeController = new HomeController($this->view, $this->session, $this->error);
+        $this->contactController = new ContactController($this->view, $this->session, $this->error);
     }
 
     public function run(): void
@@ -48,6 +51,9 @@ class Router
         if ($action === 'home') {
             // route http://localhost:8000/?action=home
             $this->homeController->displayHome();
+        } elseif ($action=== 'contact' && ($this->request->getPost() !== null)) {
+            // route http://localhost:8000/?action=contact
+            $this->contactController->contact($this->request->getPost(), $this->token, $this->request);
         } else {
             $this->error->display('Erreur 404', 'Cette page n\'existe pas !', 'FrontOffice');
         }

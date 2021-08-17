@@ -73,7 +73,7 @@
 <section class="skills section" id="skills">
     <h2 class="section-title">Compétences</h2>
 
-    <div class="skills__container grid">
+    <div class="skills__container container grid">
 
         <div>
             <h2 class="skills__subtitle">Compétences professionnelles</h2>
@@ -285,7 +285,7 @@
             </div>
         </div>
 
-        <form action="" id="contact__form" class="contact__form grid" name="contact__form">
+        <form method="post" action="index.php?action=contact" id="contact__form" class="contact__form grid" name="contact__form">
             <div class="contact__inputs grid">
                 <div class="contact__content">
                     <i class='bx bx-check-circle' ></i>
@@ -321,7 +321,7 @@
             <div class="contact__content">
                 <i class='bx bx-check-circle' ></i>
                 <i class='bx bx-error-circle' ></i>
-                <label for="agreeterms" class="contact__label">En soumettant ce formulaire, j'accepte que les informations saisies soient exploitées dans le cadre de la demande de contact.</label>
+                <label for="contact__form-agreeterms" class="contact__label">En soumettant ce formulaire, j'accepte que les informations saisies soient exploitées dans le cadre de la demande de contact.</label>
                 <input type="checkbox" id="contact__form-agreeterms" name="agreeterms" class="contact__input" value="1" required>
                 <small></small>
             </div>

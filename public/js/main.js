@@ -194,7 +194,7 @@ function checkInputs(event) {
     if (score === 5) {
         alert('submit, Formulaire OK , Envoi en Cours !');
         console.log("Formulaire OK , Envoi en Cours !");
-        event.preventDefault();
+        //event.preventDefault();
         return true;
     } else {
         alert('submit, Erreur Formulaire!');
