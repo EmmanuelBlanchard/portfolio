@@ -101,6 +101,8 @@ function checkInputEmail() {
         setErrorFor(email, 'L\'adresse e-mail ne peut pas être vide');
     } else if (!isEmail(emailValue)) {
         setErrorFor(email, 'L\'adresse e-mail n\'est pas valide');
+    } else if (!isEmailLengthMax(emailValue)) {
+        setErrorFor(email, 'Pas plus de 320 caractères possible.');
     } else {
         setSuccessFor(email);
     }
@@ -168,6 +170,8 @@ function checkInputs(event) {
         setErrorFor(email, 'L\'adresse e-mail ne peut pas être vide');
     } else if (!isEmail(emailValue)) {
         setErrorFor(email, 'L\'adresse e-mail n\'est pas valide');
+    } else if (!isEmailLengthMax(emailValue)) {
+        setErrorFor(email, 'Pas plus de 320 caractères possible.');
     } else {
         score++;
         setSuccessFor(email);
@@ -246,4 +250,10 @@ function isMessageLengthMax(message) {
 
 function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
+function isEmailLengthMax(message) {
+    if (message.length <= 320) {
+        return true;
+    }
 }

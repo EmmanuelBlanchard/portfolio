@@ -290,21 +290,21 @@
                 <i class='bx bx-check-circle' ></i>
                 <i class='bx bx-error-circle' ></i>
                 <label for="contact__form-lastname" class="contact__label">Nom</label>
-                <input type="text" id="contact__form-lastname" name="lastname" class="contact__input" required>
+                <input type="text" id="contact__form-lastname" name="lastname" class="contact__input" maxlength="255" required>
                 <small></small>
             </div>
             <div class="contact__content">
                 <i class='bx bx-check-circle' ></i>
                 <i class='bx bx-error-circle' ></i>
                 <label for="contact__form-firstname" class="contact__label">Prénom</label>
-                <input type="text" id="contact__form-firstname" name="firstname" class="contact__input" required>
+                <input type="text" id="contact__form-firstname" name="firstname" class="contact__input" maxlength="255" required>
                 <small></small>
             </div>
             <div class="contact__content">
                 <i class='bx bx-check-circle' ></i>
                 <i class='bx bx-error-circle' ></i>
                 <label for="contact__form-email" class="contact__label">E-mail</label>
-                <input type="email" id="contact__form-email" name="email" class="contact__input" required>
+                <input type="email" id="contact__form-email" name="email" class="contact__input" maxlength="320" required>
                 <small></small>
             </div>
             
@@ -312,7 +312,7 @@
                 <i class='bx bx-check-circle' ></i>
                 <i class='bx bx-error-circle' ></i>
                 <label for="contact__form-message" class="contact__label">Message</label>
-                <textarea name="message" id="contact__form-message" cols="0" rows="7" class="contact__input" required></textarea>
+                <textarea name="message" id="contact__form-message" cols="0" rows="7" class="contact__input" minlength="150" maxlength="2000" required></textarea>
                 <small></small>
             </div>
             

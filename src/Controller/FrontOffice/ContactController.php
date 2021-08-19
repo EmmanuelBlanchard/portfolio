@@ -48,6 +48,12 @@ class ContactController
                 //exit();
             }
 
+            if (mb_strlen($data['lastname']) > 256) {
+                $this->session->setSessionMessage('erreur', 'Le nom ne peut pas contenir plus de 255 caractères.');
+                //header('Location: index.php?action=contact');
+                //exit();
+            }
+
             if (!preg_match('/\d/', $data['lastname'])) {
                 $this->session->setSessionMessage('erreur', 'Le nom ne peut pas contenir un nombre.');
                 //header('Location: index.php?action=contact');
@@ -62,6 +68,12 @@ class ContactController
 
             if (empty($data['firstname'])) {
                 $this->session->setSessionMessage('erreur', 'Veuillez entrer un prénom.');
+                //header('Location: index.php?action=contact');
+                //exit();
+            }
+
+            if (mb_strlen($data['firstname']) > 256) {
+                $this->session->setSessionMessage('erreur', 'Le prénom ne peut pas contenir plus de 255 caractères.');
                 //header('Location: index.php?action=contact');
                 //exit();
             }
@@ -84,6 +96,12 @@ class ContactController
                 //exit();
             }
 
+            if (mb_strlen($data['email']) > 321) {
+                $this->session->setSessionMessage('erreur', 'L\'e-mail ne peut pas contenir plus de 320 caractères.');
+                //header('Location: index.php?action=contact');
+                //exit();
+            }
+
             if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
                 $this->session->setSessionMessage('erreur', 'L\'adresse e-mail est invalide.');
                 //header('Location: index.php?action=contact');
@@ -92,6 +110,18 @@ class ContactController
 
             if (empty($data['message'])) {
                 $this->session->setSessionMessage('erreur', 'Veuillez entrer un message.');
+                //header('Location: index.php?action=contact');
+                //exit();
+            }
+
+            if (mb_strlen($data['message']) < 150) {
+                $this->session->setSessionMessage('erreur', 'Le message ne peut pas contenir moins de 150 caractères.');
+                //header('Location: index.php?action=contact');
+                //exit();
+            }
+
+            if (mb_strlen($data['message']) > 2000) {
+                $this->session->setSessionMessage('erreur', 'Le message ne peut pas contenir plus de 2 000 caractères.');
                 //header('Location: index.php?action=contact');
                 //exit();
             }
