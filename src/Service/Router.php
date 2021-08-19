@@ -53,7 +53,7 @@ class Router
             $this->homeController->displayHome();
         } elseif ($action=== 'contact' && ($this->request->getPost() !== null)) {
             // route http://localhost:8000/?action=contact
-            $this->contactController->contact($this->request->getPost(), $this->token, $this->request);
+            $this->contactController->contact($this->request->getPost(), $this->token, $this->request, $this->session);
         } else {
             $this->error->display('Erreur 404', 'Cette page n\'existe pas !', 'FrontOffice');
         }

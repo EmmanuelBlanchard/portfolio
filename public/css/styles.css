@@ -608,6 +608,20 @@ span[class^="contact__zero-"]::before{
 	visibility: hidden;
 }
 
+.contact__content.alert-error {
+	color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    padding: 1rem 1rem;
+}
+
+.contact__content.alert-success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    padding: 1rem 1rem;
+}
+
 /* ===== FOOTER =====*/
 .footer {
     background-color: var(--first-color-second);

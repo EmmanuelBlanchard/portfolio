@@ -286,6 +286,16 @@
         </div>
 
         <form method="post" action="index.php?action=contact" id="contact__form" class="contact__form grid" name="contact__form">
+            <?php if(isset($_SESSION['error-lastname']))
+            {
+                ?>
+                <div class="contact__content alert-error" role="alert">
+                    <?php echo $_SESSION['error-lastname']; ?>
+                </div>
+                <?php
+                unset($_SESSION['error-lastname']);
+            }
+            ?>
             <div class="contact__content">
                 <i class='bx bx-check-circle' ></i>
                 <i class='bx bx-error-circle' ></i>
@@ -293,6 +303,16 @@
                 <input type="text" id="contact__form-lastname" name="lastname" class="contact__input" maxlength="255" required>
                 <small></small>
             </div>
+            <?php if(isset($_SESSION['error-firstname']))
+            {
+                ?>
+                <div class="contact__content alert-error" role="alert">
+                    <?php echo $_SESSION['error-firstname']; ?>
+                </div>
+                <?php
+                unset($_SESSION['error-firstname']);
+            }
+            ?>
             <div class="contact__content">
                 <i class='bx bx-check-circle' ></i>
                 <i class='bx bx-error-circle' ></i>
@@ -300,6 +320,16 @@
                 <input type="text" id="contact__form-firstname" name="firstname" class="contact__input" maxlength="255" required>
                 <small></small>
             </div>
+            <?php if(isset($_SESSION['error-email']))
+            {
+                ?>
+                <div class="contact__content alert-error" role="alert">
+                    <?php echo $_SESSION['error-email']; ?>
+                </div>
+                <?php
+                unset($_SESSION['error-email']);
+            }
+            ?>
             <div class="contact__content">
                 <i class='bx bx-check-circle' ></i>
                 <i class='bx bx-error-circle' ></i>
@@ -307,7 +337,16 @@
                 <input type="email" id="contact__form-email" name="email" class="contact__input" maxlength="320" required>
                 <small></small>
             </div>
-            
+            <?php if(isset($_SESSION['error-message']))
+            {
+                ?>
+                <div class="contact__content alert-error" role="alert">
+                    <?php echo $_SESSION['error-message']; ?>
+                </div>
+                <?php
+                unset($_SESSION['error-message']);
+            }
+            ?>
             <div class="contact__content">
                 <i class='bx bx-check-circle' ></i>
                 <i class='bx bx-error-circle' ></i>
@@ -315,7 +354,16 @@
                 <textarea name="message" id="contact__form-message" cols="0" rows="7" class="contact__input" minlength="150" maxlength="2000" required></textarea>
                 <small></small>
             </div>
-            
+            <?php if(isset($_SESSION['error-agreeterms']))
+            {
+                ?>
+                <div class="contact__content alert-error" role="alert">
+                    <?php echo $_SESSION['error-agreeterms']; ?>
+                </div>
+                <?php
+                unset($_SESSION['error-agreeterms']);
+            }
+            ?>
             <div class="contact__content">
                 <i class='bx bx-check-circle' ></i>
                 <i class='bx bx-error-circle' ></i>

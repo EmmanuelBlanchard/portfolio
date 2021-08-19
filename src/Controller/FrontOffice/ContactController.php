@@ -28,114 +28,89 @@ class ContactController
         $this->error = $error;
     }
 
-    public function contact(array $data, Token $token, Request $request): void
+    public function contact(array $data, Token $token, Request $request, Session $session): void
     {
+        //var_dump($token, $request, $data, $request->getPostItem('csrfToken'));
+        //die();
+
         /*
         if ($request->getPostItem('csrfToken') !== null) {
             if (!$token->verify($request->getPostItem('csrfToken'))) {
                 $this->session->setSessionMessage('erreur', 'Votre message ne peut être envoyé !');
-                header('Location: index.php?action=home');
-                exit();
+
+                $this->view->render(['template' => 'home', 'csrfToken' => $token->generate(), 'message' => $session->getSessionMessage('message'), 'erreur' => $session->getSessionMessage('erreur')], 'FrontOffice');
+
+                //header('Location: index.php?action=home');
+                //exit();
             }
-        }*/
+        }
+        */
 
         if (!empty($data['lastname']) || !empty($data['firstname']) ||
         !empty($data['email']) || !empty($data['message']) ||
         !empty($data['agreeterms'])) {
             if (empty($data['lastname'])) {
-                $this->session->setSessionMessage('erreur', 'Veuillez entrer un nom.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-lastname', 'Veuillez entrer un nom.');
             }
 
             if (mb_strlen($data['lastname']) > 256) {
-                $this->session->setSessionMessage('erreur', 'Le nom ne peut pas contenir plus de 255 caractères.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-lastname', 'Le nom ne peut pas contenir plus de 255 caractères.');
             }
 
             if (!preg_match('/\d/', $data['lastname'])) {
-                $this->session->setSessionMessage('erreur', 'Le nom ne peut pas contenir un nombre.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-lastname', 'Le nom ne peut pas contenir un nombre.');
             }
 
             if (!preg_match('/^[A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ]{1}([a-zàâäçéèêëîïôöùûüÿæœðó])*[-\'\’\s]{0,1}([A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ]{0,1}([a-zàâäçéèêëîïôöùûüÿæœðó]*)[-\'\’\s]{0,1})*$/', $data['lastname'])) {
-                $this->session->setSessionMessage('erreur', 'La première lettre du nom doit être en majuscule.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-lastname', 'La première lettre du nom doit être en majuscule.');
             }
 
             if (empty($data['firstname'])) {
-                $this->session->setSessionMessage('erreur', 'Veuillez entrer un prénom.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-firstname', 'Veuillez entrer un prénom.');
             }
 
             if (mb_strlen($data['firstname']) > 256) {
-                $this->session->setSessionMessage('erreur', 'Le prénom ne peut pas contenir plus de 255 caractères.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-firstname', 'Le prénom ne peut pas contenir plus de 255 caractères.');
             }
 
             if (!preg_match('/\d/', $data['firstname'])) {
-                $this->session->setSessionMessage('erreur', 'Le prénom ne peut pas contenir un nombre.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-firstname', 'Le prénom ne peut pas contenir un nombre.');
             }
 
             if (!preg_match('/^[A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ]{1}([a-zàâäçéèêëîïôöùûüÿæœðó])*[-\'\’\s]{0,1}([A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ]{0,1}([a-zàâäçéèêëîïôöùûüÿæœðó]*)[-\'\’\s]{0,1})*$/', $data['firstname'])) {
-                $this->session->setSessionMessage('erreur', 'La première lettre du prénom doit être en majuscule.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-firstname', 'La première lettre du prénom doit être en majuscule.');
             }
 
             if (empty($data['email'])) {
-                $this->session->setSessionMessage('erreur', 'Veuillez entrer un e-mail.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-email', 'Veuillez entrer un e-mail.');
             }
 
             if (mb_strlen($data['email']) > 321) {
-                $this->session->setSessionMessage('erreur', 'L\'e-mail ne peut pas contenir plus de 320 caractères.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-email', 'L\'e-mail ne peut pas contenir plus de 320 caractères.');
             }
 
             if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-                $this->session->setSessionMessage('erreur', 'L\'adresse e-mail est invalide.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-email', 'L\'adresse e-mail est invalide.');
             }
 
             if (empty($data['message'])) {
-                $this->session->setSessionMessage('erreur', 'Veuillez entrer un message.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-message', 'Veuillez entrer un message.');
             }
 
             if (mb_strlen($data['message']) < 150) {
-                $this->session->setSessionMessage('erreur', 'Le message ne peut pas contenir moins de 150 caractères.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-message', 'Le message ne peut pas contenir moins de 150 caractères.');
             }
 
             if (mb_strlen($data['message']) > 2000) {
-                $this->session->setSessionMessage('erreur', 'Le message ne peut pas contenir plus de 2 000 caractères.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-message', 'Le message ne peut pas contenir plus de 2 000 caractères.');
             }
 
             if (empty($data['agreeterms'])) {
-                $this->session->setSessionMessage('erreur', 'Veuillez cocher la case : j\'accepte que les informations saisies soient exploitées dans le cadre de la demande de contact un message. afin d\envoyer le message');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-agreeterms', 'Veuillez cocher la case : j\'accepte que les informations saisies soient exploitées dans le cadre de la demande de contact un message. afin d\envoyer le message');
             }
 
             if (!filter_var($data['agreeterms'], FILTER_VALIDATE_INT)) {
-                $this->session->setSessionMessage('erreur', 'La case a cocher est invalide.');
-                //header('Location: index.php?action=contact');
-                //exit();
+                $this->session->setSessionMessage('error-agreeterms', 'La case a cocher est invalide.');
             }
 
             $lastname = $this->sanitizeData($data['lastname']);
@@ -150,7 +125,7 @@ class ContactController
 
             try {
                 // Server settings
-                $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+                //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
                 $mail->isSMTP();
                 $mail->Host = "localhost";
@@ -197,10 +172,10 @@ class ContactController
 
                 // On envoie
                 $mail->send();
-                echo "Message envoyé";
 
-                header('Location: index.php?action=home');
-                exit();
+                $this->session->setSessionMessage('message', 'Message envoyé');
+
+                $this->view->render(['template' => 'home', 'csrfToken' => $token->generate(), 'message' => $session->getSessionMessage('message'), 'erreur' => $session->getSessionMessage('erreur')], 'FrontOffice');
             } catch (Exception $e) {
                 echo "Message non envoyé. Erreur: {$mail->ErrorInfo}";
             } catch (Exception $e) {
@@ -210,12 +185,9 @@ class ContactController
                 /* PHP exception (note the backslash to select the global namespace Exception class). */
                 echo $e->getMessage();
             }
-        } else {
-            header('Location: index.php?action=error');
-            exit();
         }
-        //header('Location: index.php?action=home');
-        //exit();
+
+        $this->view->render(['template' => 'home', 'csrfToken' => $token->generate(), 'message' => $session->getSessionMessage('message'), 'erreur' => $session->getSessionMessage('erreur')], 'FrontOffice');
     }
 
     public function sanitizeData(string $data): ?string
