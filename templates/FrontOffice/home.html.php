@@ -286,21 +286,19 @@
         </div>
 
         <form method="post" action="index.php?action=contact" id="contact__form" class="contact__form grid" name="contact__form">
-            <div class="contact__inputs grid">
-                <div class="contact__content">
-                    <i class='bx bx-check-circle' ></i>
-                    <i class='bx bx-error-circle' ></i>
-                    <label for="contact__form-lastname" class="contact__label">Nom</label>
-                    <input type="text" id="contact__form-lastname" name="lastname" class="contact__input" required>
-                    <small></small>
-                </div>
-                <div class="contact__content">
-                    <i class='bx bx-check-circle' ></i>
-                    <i class='bx bx-error-circle' ></i>
-                    <label for="contact__form-firstname" class="contact__label">Prénom</label>
-                    <input type="text" id="contact__form-firstname" name="firstname" class="contact__input" required>
-                    <small></small>
-                </div>
+            <div class="contact__content">
+                <i class='bx bx-check-circle' ></i>
+                <i class='bx bx-error-circle' ></i>
+                <label for="contact__form-lastname" class="contact__label">Nom</label>
+                <input type="text" id="contact__form-lastname" name="lastname" class="contact__input" required>
+                <small></small>
+            </div>
+            <div class="contact__content">
+                <i class='bx bx-check-circle' ></i>
+                <i class='bx bx-error-circle' ></i>
+                <label for="contact__form-firstname" class="contact__label">Prénom</label>
+                <input type="text" id="contact__form-firstname" name="firstname" class="contact__input" required>
+                <small></small>
             </div>
             <div class="contact__content">
                 <i class='bx bx-check-circle' ></i>

@@ -557,7 +557,7 @@ span[class^="contact__zero-"]::before{
     padding: .5rem;
 }
 
-.contact__form.grid, .contact__inputs.grid {
+.contact__form.grid {
 	gap: 2.5rem;
 }
 
@@ -569,7 +569,7 @@ span[class^="contact__zero-"]::before{
 	border-color: #2B7D54;
 }
 
-.contact__content.error input{
+.contact__content.error input {
 	border-color: #D8221B;
 }
 
@@ -817,8 +817,5 @@ span[class^="contact__zero-"]::before{
 
     .contact_form {
         width: 460px;
-    }
-    .contact__inputs {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
