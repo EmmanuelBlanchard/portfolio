@@ -41,9 +41,9 @@ class Error
 
     public function display($typeMessage, $message, $origin): void
     {
-        $errorTab = [['errorName' => $typeMessage, 'errorValue' => $message]];
+        $errorTab = [['error-name' => $typeMessage, 'error-value' => $message]];
 
-        $this->view->render(['template' => 'error', 'errortab' => $errorTab ], $origin);
+        $this->view->render(['template' => 'error', 'error-tab' => $errorTab ], $origin);
     }
 
     public function show($typeMessage): ?array

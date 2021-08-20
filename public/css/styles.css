@@ -644,6 +644,46 @@ span[class^="contact__zero-"]::before{
     margin: 0 var(--mb-2);
 }
 
+/* ===== ERROR =====*/
+
+.error__title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-semi);
+    margin-bottom: var(--mb-1);
+}
+
+.error__description {
+    margin-bottom: var(--mb-2);
+}
+
+.error__content {
+    background-color: var(--input-color);
+    border-radius: .5rem;
+    padding: .75rem 1rem .25rem;
+    position: relative;
+}
+
+.error__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error__content.alert-error {
+	color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    padding: 1rem 1rem;
+}
+
+.error__content.alert-success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    padding: 1rem 1rem;
+}
+
 /* ===== SCROLL UP =====*/
 .scrollup {
     position: fixed;
