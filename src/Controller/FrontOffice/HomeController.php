@@ -20,8 +20,8 @@ class HomeController
         $this->session = $session;
     }
 
-    public function displayHome(): void
+    public function displayHome(Token $token, Session $session): void
     {
-        $this->view->render(['template' => 'home'], 'FrontOffice');
+        $this->view->render(['template' => 'home', 'csrfToken' => $token->generate()], 'FrontOffice');
     }
 }

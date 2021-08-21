@@ -50,7 +50,7 @@ class Router
         // Déterminer sur quelle route nous sommes // Attention algorithme naïf
         if ($action === 'home') {
             // route http://localhost:8000/?action=home
-            $this->homeController->displayHome();
+            $this->homeController->displayHome($this->token, $this->session);
         } elseif ($action=== 'contact' && ($this->request->getPost() !== null)) {
             // route http://localhost:8000/?action=contact
             $this->contactController->contact($this->request->getPost(), $this->token, $this->request, $this->session);

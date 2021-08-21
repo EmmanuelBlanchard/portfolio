@@ -30,6 +30,17 @@ class ContactController
 
     public function contact(array $data, Token $token, Request $request, Session $session): void
     {
+        //var_dump($data['csrfToken']);
+        //die();
+
+        if ($request->getPostItem('csrfToken') !== null) {
+            if (!$token->verify($request->getPostItem('csrfToken'))) {
+                $this->session->setSessionMessage('error-form', 'Votre message ne peut être envoyé.');
+                header('Location: index.php?action=home');
+                exit();
+            }
+        }
+
         if (empty($data['lastname'])) {
             $this->session->setSessionMessage('error-lastname', 'Veuillez entrer un nom.');
 

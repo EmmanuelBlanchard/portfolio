@@ -396,6 +396,8 @@
             }
             ?>
             
+            <input class="hidden" type="hidden" name="csrfToken" value="<?=$data['csrfToken']; ?>" >
+
             <div>
                 <button type="submit" id="contact__form-submit" class="button button--flex">
                     Envoyer
