@@ -684,6 +684,39 @@ span[class^="contact__zero-"]::before{
     padding: 1rem 1rem;
 }
 
+/* ===== LEGAL NOTICES MODAL =====*/
+.legalnotices__button {
+    color: #fff;
+    cursor: pointer;
+}
+
+.legalnotices__button:hover {
+    color: var(--text-color-light);
+}
+
+.modal-header {
+	background-color: var(--first-color-second);
+	color: #fff;
+	font-weight: bold;
+}
+
+.modal-title {
+	color: #fff;
+}
+
+.modal-body a {
+    color: var(--first-color);
+}
+
+.btn-close {
+	filter: invert(1) grayscale(100%) brightness(200%);
+	opacity: 0.9;
+}
+
+.btn-close:hover {
+	opacity: 1;
+}
+
 /* ===== SCROLL UP =====*/
 .scrollup {
     position: fixed;
