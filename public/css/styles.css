@@ -12,7 +12,7 @@
     /* Change favorite color */
     --hue-color: 224; /* Purple 250 - Green 142 - Blue 230 - Pink 340 */
     /* HSL color mode */
-    --first-color: hsl(var(--hue-color), 89%, 60%);
+    --first-color: hsl(var(--hue-color), 81%, 59%);
     --first-color-second: hsl(var(--hue-color), 56%, 12%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
@@ -98,6 +98,10 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
 }
 
 img {
@@ -642,6 +646,10 @@ span[class^="contact__zero-"]::before{
     font-size: 1.5rem;
     color: #fff;
     margin: 0 var(--mb-2);
+}
+
+.footer__icon:hover {
+	color: var(--text-color-light);
 }
 
 /* ===== ERROR =====*/

@@ -51,8 +51,8 @@
             <p class="footer__title">Emmanuel</p>
 
             <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.linkedin.com/in/emmanuel-blanchard-001/" target="_blank" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/EmmanuelBlanchard/" target="_blank" class="footer__icon"><i class='bx bxl-github' ></i></a>
             </div>
             <p> Emmanuel Blanchard | <a class="legalnotices__button modal-trigger" href="#" data-bs-toggle="modal" data-bs-target="#modal-legalnotices" aria-haspopup="dialog" role="button">Mentions légales</a>
             </p>
