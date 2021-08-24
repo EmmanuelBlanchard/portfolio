@@ -17,6 +17,9 @@
         <!--===== CSS =====-->
         <link rel="stylesheet" href="css/styles.css">
         
+        <!--===== FAVICON =====-->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
         <title>Portfolio de Emmanuel Blanchard</title>
     </head>
 
