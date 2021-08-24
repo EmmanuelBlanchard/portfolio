@@ -77,7 +77,7 @@
 
         <div>
             <h2 class="skills__subtitle">Compétences professionnelles</h2>
-            <p class="skills__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro error reiciendis quidem laudantium culpa sed quibusdam, dolores vitae consequuntur id cupiditate iusto esse dicta eveniet sint, necessitatibus cum voluptas quos!</p>
+            <p class="skills__text">Durant ma formation de développeur Web chez OpenClassrooms, j'ai réalisé cinq projets professionnalisants et j'ai appris à utiliser plusieurs langages de programmation.</p>
 
             <div class="skills__data">
                 <div class="skills__names">
