@@ -7,7 +7,6 @@ namespace App\Controller\FrontOffice;
 use App\Controller\Error;
 use App\Service\Http\Request;
 use App\Service\Http\Session;
-use App\Service\Security\Token;
 use App\View\View;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -18,7 +17,6 @@ class ContactController
     private View $view;
     private Request $request;
     private Session $session;
-    private Token $token;
     private Error $error;
 
     public function __construct(View $view, Session $session, Error $error)
@@ -28,19 +26,8 @@ class ContactController
         $this->error = $error;
     }
 
-    public function contact(array $data, Token $token, Request $request, Session $session): void
+    public function contact(array $data, Request $request, Session $session): void
     {
-        //var_dump($data['csrfToken']);
-        //die();
-
-        if ($request->getPostItem('csrfToken') !== null) {
-            if (!$token->verify($request->getPostItem('csrfToken'))) {
-                $this->session->setSessionMessage('error-form', 'Votre message ne peut être envoyé.');
-                header('Location: index.php?action=home');
-                exit();
-            }
-        }
-
         if (empty($data['lastname'])) {
             $this->session->setSessionMessage('error-lastname', 'Veuillez entrer un nom.');
 
@@ -211,7 +198,6 @@ class ContactController
 
                 $this->view->render(['template' => 'home'], 'FrontOffice');
             } catch (Exception $e) {
-                //echo "Message non envoyé. Erreur: {$mail->ErrorInfo}";
                 $this->error->display("Erreur: {$mail->ErrorInfo}", 'Message non envoyé.', 'FrontOffice');
 
                 $this->view->render(['template' => 'error'], 'FrontOffice');

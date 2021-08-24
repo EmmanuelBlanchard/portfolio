@@ -14,31 +14,6 @@ class Session
         }
     }
 
-    public function getToken(): string
-    {
-        return $_SESSION['csrfToken'];
-    }
-
-    public function setToken(string $hash): void
-    {
-        $_SESSION['csrfToken'] = $hash;
-    }
-
-    public function setLogin(string $typeMessage, bool $value): void
-    {
-        if (isset($_SESSION)) {
-            $_SESSION[$typeMessage] = $value;
-        }
-    }
-
-    public function getLogin(): bool
-    {
-        if (isset($_SESSION['login'])) {
-            return $_SESSION['login'];
-        }
-        return false;
-    }
-
     public function setSessionMessage(string $typeMessage, string $message): void
     {
         if (isset($_SESSION)) {
@@ -63,13 +38,5 @@ class Session
             return $sessionMessage;
         }
         return null;
-    }
-
-    public function stopSession(): void
-    {
-        $_SESSION = [];
-        session_destroy();
-        $this->setSessionMessage('message', 'Vous êtes maintenant déconnecté !');
-        $this->setLogin('login', false);
     }
 }

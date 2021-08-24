@@ -7,35 +7,26 @@ namespace  App\Service;
 use App\Controller\Error;
 use App\Controller\FrontOffice\ContactController;
 use App\Controller\FrontOffice\HomeController;
-use App\Service\Database;
 use App\Service\Http\Request;
 use App\Service\Http\Session;
-use App\Service\Security\AccessControl;
-use App\Service\Security\Token;
 use App\View\View;
 
-// Cette classe router est un exemple très basique. Cette façon de faire n'est pas optimale
+// Cette classe router est un exemple très basique.
 class Router
 {
-    private Database $database;
     private View $view;
     private HomeController $homeController;
     private ContactController $contactController;
     private Request $request;
     private Session $session;
-    private AccessControl $accesscontrol;
-    private Token $token;
     private Error $error;
 
     public function __construct()
     {
         // Dépendances
-        $this->database = new Database();
         $this->view = new View();
         $this->request = new Request();
         $this->session = new Session();
-        $this->accesscontrol = new AccessControl($this->session);
-        $this->token = new Token($this->session);
         $this->error = new Error($this->session, $this->view);
 
         // Injection des dépendances
@@ -47,13 +38,13 @@ class Router
     {
         $action = $this->request->getGetItem('action') ?? 'home';
 
-        // Déterminer sur quelle route nous sommes // Attention algorithme naïf
+        // Déterminer sur quelle route nous sommes
         if ($action === 'home') {
             // route http://localhost:8000/?action=home
-            $this->homeController->displayHome($this->token, $this->session);
+            $this->homeController->displayHome();
         } elseif ($action=== 'contact' && ($this->request->getPost() !== null)) {
             // route http://localhost:8000/?action=contact
-            $this->contactController->contact($this->request->getPost(), $this->token, $this->request, $this->session);
+            $this->contactController->contact($this->request->getPost(), $this->request, $this->session);
         } else {
             $this->error->display('Erreur 404', 'Cette page n\'existe pas !', 'FrontOffice');
         }
