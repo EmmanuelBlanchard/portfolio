@@ -16,7 +16,6 @@ window.onload = () => {
 
             // We get the closing buttons
             const modalClose = modal.querySelectorAll("[data-dismiss=dialog]");
-            console.log(modalClose)
 
             for(let close of modalClose) {
                 close.addEventListener("click", () => {
