@@ -51,7 +51,7 @@
     <h2 class="section-title">À propos</h2>
 
     <div class="about__container container grid">
-        <img src="img/about.jpg" alt="" class="about__img">
+        <img src="img/about.jpg" alt="Vue de face d'Emmanuel Blanchard" class="about__img">
 
         <div class="about__data">
             <p class="about__description">
@@ -146,7 +146,7 @@
         </div>
 
         <div>
-            <img src="img/work6.jpg" alt="" class="skills__img">
+            <img src="img/work6.jpg" alt="Vue élevée sur un bureau blanc où est disposé plusieurs objets: un smartphone, un cahier ouvert de pages blanches vides, un crayon, une paire de lunettes, un ordinateur ouvert sur le flanc droit" class="skills__img">
         </div>
     </div>
 </section>
@@ -159,7 +159,7 @@
         <div class="swiper-wrapper">
             <!--===== WORK 1 =====-->
             <div class="work__content grid swiper-slide">
-                <img src="img/work1.jpg" alt="" class="work__img">
+                <img src="img/work1.jpg" alt="Capture d'écran de la page d'accueil du site WebAgency" class="work__img">
 
                 <div class="work__data">
                     <h3 class="work__title">WebAgency</h3>
@@ -175,7 +175,7 @@
 
             <!--===== WORK 2 =====-->
             <div class="work__content grid swiper-slide">
-                <img src="img/work2.jpg" alt="" class="work__img">
+                <img src="img/work2.jpg" alt="Capture d'écran de la page d'accueil du site fictif de l'office de tourisme d'Ireki" class="work__img">
 
                 <div class="work__data">
                     <h3 class="work__title">Ireki</h3>
@@ -191,7 +191,7 @@
 
             <!--===== WORK 3 =====-->
             <div class="work__content grid swiper-slide">
-                <img src="img/work3.jpg" alt="" class="work__img">
+                <img src="img/work3.jpg" alt="Capture d'écran de la page d'accueil du site de réservation de vélos fictif de Velo Lyon" class="work__img">
 
                 <div class="work__data">
                     <h3 class="work__title">Velo Lyon</h3>
@@ -207,7 +207,7 @@
 
             <!--===== WORK 4 =====-->
             <div class="work__content grid swiper-slide">
-                <img src="img/work4.jpg" alt="" class="work__img">
+                <img src="img/work4.jpg" alt="Capture d'écran de la page d'accueil du blog de l'écrivain fictif Jean Forteroche" class="work__img">
 
                 <div class="work__data">
                     <h3 class="work__title">JeanForteroche</h3>
@@ -223,7 +223,7 @@
 
             <!--===== WORK 5 =====-->
             <div class="work__content grid swiper-slide">
-                <img src="img/work5.jpg" alt="" class="work__img">
+                <img src="img/work5.jpg" alt="Capture d'écran de la page d'accueil du site web d'échange de livres fictif" class="work__img">
 
                 <div class="work__data">
                     <h3 class="work__title">ÉchangeLivres</h3>
