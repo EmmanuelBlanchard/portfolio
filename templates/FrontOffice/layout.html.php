@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <!-- =====BOX ICONS=====-->
+        <link rel='stylesheet' href='icons/css/boxicons.min.css'>
 
         <!--===== SWIPER CSS =====-->
         <link rel="stylesheet" href="css/swiper-bundle.min.css">

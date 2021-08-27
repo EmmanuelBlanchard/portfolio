@@ -2,3 +2,4 @@
 .php-cs-fixer.php
 .php-cs-fixer.cache
 /src/Controller/FrontOffice/ContactController.php
+/public/icons/
