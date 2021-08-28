@@ -50,20 +50,18 @@ function scrollUp() {
 window.addEventListener('scroll', scrollUp)
 
 /*===== FORM VALIDATION =====*/
-window.onload = () => {
-    lastname.addEventListener('input', checkInputLastName);
-    firstname.addEventListener('input', checkInputFirstName);
-    email.addEventListener('input', checkInputEmail);
-    message.addEventListener('input', checkInputMessage);
-    agreeterms.addEventListener('input', checkInputAgreeTerms);
-}
-
 let form = document.querySelector('#contact__form');
 const lastname = document.querySelector('#contact__form-lastname');
 const firstname = document.querySelector('#contact__form-firstname');
 const email = document.querySelector('#contact__form-email');
 const message = document.querySelector('#contact__form-message');
 const agreeterms = document.querySelector('#contact__form-agreeterms');
+
+lastname.addEventListener('input', checkInputLastName);
+firstname.addEventListener('input', checkInputFirstName);
+email.addEventListener('input', checkInputEmail);
+message.addEventListener('input', checkInputMessage);
+agreeterms.addEventListener('input', checkInputAgreeTerms);
 
 function checkInputLastName() {
     // trim to remove the whitespaces
