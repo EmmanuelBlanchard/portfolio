@@ -194,13 +194,13 @@ function checkInputs(event) {
     }
 
     if (score === 5) {
-        alert('submit, Formulaire OK , Envoi en Cours !');
-        console.log("Formulaire OK , Envoi en Cours !");
+        //alert('submit, Formulaire OK , Envoi en Cours !');
+        //console.log("Formulaire OK , Envoi en Cours !");
         //event.preventDefault();
         return true;
     } else {
-        alert('submit, Erreur Formulaire!');
-        console.log("Erreur Formulaire!");
+        //alert('submit, Erreur Formulaire!');
+        //console.log("Erreur Formulaire!");
         event.preventDefault();
         return false;
     }
