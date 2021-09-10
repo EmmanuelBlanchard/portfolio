@@ -3,8 +3,8 @@
     <div class="home__container container grid">
         <div class="home__content grid">
             <div class="home__social">
-                <a href="https://www.linkedin.com/in/emmanuel-blanchard-001/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin' ></i></a>
-                <a href="https://github.com/EmmanuelBlanchard/" target="_blank" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.linkedin.com/in/emmanuel-blanchard-001/" target="_blank" class="home__social-icon" aria-label="Cliquer pour aller vers ma page LinkedIn"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/EmmanuelBlanchard/" target="_blank" class="home__social-icon" aria-label="Cliquer pour aller vers ma page GitHub"><i class='bx bxl-github' ></i></a>
             </div>
 
             <div class="home__img">
@@ -28,7 +28,7 @@
 
             <div class="home__data">
                 <h1 class="home__title">Bonjour, <br> Je suis Emmanuel</h1>
-                <h3 class="home__subtitle">Développeur Web</h3>
+                <h2 class="home__subtitle">Développeur Web</h2>
                 
                 <a href="#contact" class="button button--flex">
                     Me contacter <i class='bx bx-message-rounded-detail button__icon'></i>
@@ -76,7 +76,7 @@
     <div class="skills__container container grid">
 
         <div>
-            <h2 class="skills__subtitle">Compétences professionnelles</h2>
+            <h3 class="skills__subtitle">Compétences professionnelles</h3>
             <p class="skills__text">Durant ma formation de développeur Web chez OpenClassrooms, j'ai réalisé cinq projets professionnalisants et j'ai appris à utiliser plusieurs langages de programmation.</p>
 
             <div class="skills__data">

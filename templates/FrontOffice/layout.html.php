@@ -53,8 +53,8 @@
             <p class="footer__title">Emmanuel</p>
 
             <div class="footer__social">
-                <a href="https://www.linkedin.com/in/emmanuel-blanchard-001/" target="_blank" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
-                <a href="https://github.com/EmmanuelBlanchard/" target="_blank" class="footer__icon"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.linkedin.com/in/emmanuel-blanchard-001/" target="_blank" class="footer__icon" aria-label="Cliquer pour aller vers ma page LinkedIn"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/EmmanuelBlanchard/" target="_blank" class="footer__icon" aria-label="Cliquer pour aller vers ma page GitHub"><i class='bx bxl-github' ></i></a>
             </div>
             <p> Emmanuel Blanchard | <a class="legalnotices__button" href="#" data-toggle="modal" data-target="#modal" role="button">Mentions légales</a>
             </p>
@@ -143,7 +143,7 @@
         </div>
 
         <!--===== SCROLL UP =====-->
-        <a href="#" class="scrollup" id="scroll-up">
+        <a href="#" class="scrollup" id="scroll-up" aria-label="Faire défiler vers le haut de la page d'accueil">
             <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
         </a>
 
