@@ -318,6 +318,10 @@ img {
     fill: var(--first-color);
 }
 
+mask {
+    mask-type: alpha;
+}
+
 .home__blob-img {
     width: 170px;
 }
