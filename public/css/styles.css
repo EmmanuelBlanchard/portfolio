@@ -46,7 +46,6 @@
     --input-color: hsl(var(--hue-color), 70%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
     --container-color: #FFF;
-    --hover-color: #DBDBDB;
     --modal-hover-color: hsl(var(--hue-color), 81%, 38%);
 }
 
@@ -259,7 +258,7 @@ img {
 }
 .nav__link:hover {
     position: relative;
-    color: var(--hover-color);
+    color: var(--first-color);
 }
 .nav__link:hover:after {
     position: absolute;
