@@ -51,7 +51,7 @@
     <h2 class="section-title">À propos</h2>
 
     <div class="about__container container grid">
-        <img src="img/about.jpg" alt="Vue de face d'Emmanuel Blanchard" class="about__img">
+        <img src="img/about.jpg" alt="" class="about__img">
 
         <div class="about__data">
             <p class="about__description">
@@ -146,7 +146,7 @@
         </div>
 
         <div>
-            <img src="img/work6.jpg" alt="Vue élevée sur un bureau blanc où est disposé plusieurs objets: un smartphone, un cahier ouvert de pages blanches vides, un crayon, une paire de lunettes, un ordinateur ouvert sur le flanc droit" class="skills__img">
+            <img src="img/work6.jpg" alt="" class="skills__img">
         </div>
     </div>
 </section>
@@ -159,14 +159,14 @@
         <div class="swiper-wrapper">
             <!--===== WORK 1 =====-->
             <div class="work__content grid swiper-slide">
-                <img src="img/work1.jpg" alt="Capture d'écran de la page d'accueil du site WebAgency" class="work__img">
+                <img src="img/work1.jpg" alt="" class="work__img">
 
                 <div class="work__data">
                     <h3 class="work__title">WebAgency</h3>
                     <p class="work__description">
                         Site web vitrine d'une agence web fictive
                     </p>
-                    <a href="https://projet1.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
+                    <a href="https://projet1.emmanuel-blanchard.fr/" class="button button--flex button--small work__button" aria-label="Démo vers le projet WebAgency.">
                         Demo
                         <i class='bx bx-right-arrow-alt button__icon' ></i>
                     </a>
@@ -175,14 +175,14 @@
 
             <!--===== WORK 2 =====-->
             <div class="work__content grid swiper-slide">
-                <img src="img/work2.jpg" alt="Capture d'écran de la page d'accueil du site fictif de l'office de tourisme d'Ireki" class="work__img">
+                <img src="img/work2.jpg" alt="" class="work__img">
 
                 <div class="work__data">
                     <h3 class="work__title">Ireki</h3>
                     <p class="work__description">
                         Site fictif de l'office de tourisme d'Ireki
                     </p>
-                    <a href="https://projet2.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
+                    <a href="https://projet2.emmanuel-blanchard.fr/" class="button button--flex button--small work__button" aria-label="Démo vers le projet Ireki.">
                         Demo
                         <i class='bx bx-right-arrow-alt button__icon' ></i>
                     </a>
@@ -191,14 +191,14 @@
 
             <!--===== WORK 3 =====-->
             <div class="work__content grid swiper-slide">
-                <img src="img/work3.jpg" alt="Capture d'écran de la page d'accueil du site de réservation de vélos fictif de Velo Lyon" class="work__img">
+                <img src="img/work3.jpg" alt="" class="work__img">
 
                 <div class="work__data">
                     <h3 class="work__title">Velo Lyon</h3>
                     <p class="work__description">
-                        Site de réservation de vélos, utilise les APIsJCDecaux et Leaflet
+                        Site de réservation de vélos, utilise les APIs JCDecaux et Leaflet
                     </p>
-                    <a href="https://projet3.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
+                    <a href="https://projet3.emmanuel-blanchard.fr/" class="button button--flex button--small work__button" aria-label="Démo vers le projet Velo Lyon.">
                         Demo
                         <i class='bx bx-right-arrow-alt button__icon' ></i>
                     </a>
@@ -207,14 +207,14 @@
 
             <!--===== WORK 4 =====-->
             <div class="work__content grid swiper-slide">
-                <img src="img/work4.jpg" alt="Capture d'écran de la page d'accueil du blog de l'écrivain fictif Jean Forteroche" class="work__img">
+                <img src="img/work4.jpg" alt="" class="work__img">
 
                 <div class="work__data">
                     <h3 class="work__title">JeanForteroche</h3>
                     <p class="work__description">
-                        Blog pour un écrivain, utilisant le modèleMVC et la logique CRUD
+                        Blog pour un écrivain, utilisant le modèle MVC et la logique CRUD
                     </p>
-                    <a href="https://projet4.emmanuel-blanchard.fr/" class="button button--flex button--small work__button">
+                    <a href="https://projet4.emmanuel-blanchard.fr/" class="button button--flex button--small work__button" aria-label="Démo vers le projet JeanForteroche.">
                         Demo
                         <i class='bx bx-right-arrow-alt button__icon' ></i>
                     </a>
@@ -223,14 +223,14 @@
 
             <!--===== WORK 5 =====-->
             <div class="work__content grid swiper-slide">
-                <img src="img/work5.jpg" alt="Capture d'écran de la page d'accueil du site web d'échange de livres fictif" class="work__img">
+                <img src="img/work5.jpg" alt="" class="work__img">
 
                 <div class="work__data">
                     <h3 class="work__title">ÉchangeLivres</h3>
                     <p class="work__description">
                         Site web d'échange de livres, en développement utilisant le framework Symfony
                     </p>
-                    <a href="https://github.com/EmmanuelBlanchard/OpenClassroomsProject5" class="button button--flex button--small work__button">
+                    <a href="https://github.com/EmmanuelBlanchard/OpenClassroomsProject5" class="button button--flex button--small work__button" aria-label="Démo vers le projet ÉchangeLivres.">
                         Demo
                         <i class='bx bx-right-arrow-alt button__icon' ></i>
                     </a>
